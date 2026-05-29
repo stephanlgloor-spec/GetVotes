@@ -1,2 +1,2 @@
 # GetVotes
-Display the votes online in aa page from the whole year laways up to date
+Display the votes online on on page from the whole year always up to date
