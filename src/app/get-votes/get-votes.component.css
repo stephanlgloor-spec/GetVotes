@@ -1,0 +1,9 @@
+.vote-count {
+  font-size: 1.2rem;
+  margin-top: 12px;
+  font-weight: 500;
+}
+
+mat-card {
+  padding: 16px;
+}
