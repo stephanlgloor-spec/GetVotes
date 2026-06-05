@@ -17,17 +17,12 @@ getTestBed().initTestEnvironment(
   platformBrowserDynamicTesting()
 );
 
-// const context = require.context('./', true, /\.spec\.ts$/);
-// context.keys().map(context);
+declare const require: {
+  context(path: string, deep?: boolean, filter?: RegExp): {
+    keys(): string[];
+    <T>(id: string): T;
+  };
+};
 
-
-describe('Test', () => {
-
-  beforeEach(async () => {
-    
-  });
-
-  it('should init', () => {
-    expect(true).toBeTruthy();
-  });
-});
+const context = require.context('../test', true, /\.spec\.ts$/);
+context.keys().map(context);

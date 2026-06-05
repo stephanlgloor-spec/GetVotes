@@ -5,6 +5,7 @@ module.exports = function (config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    // Jasmine tests are located under the top-level test/ directory.
     plugins: [
       require('karma-jasmine'),
       require('karma-chrome-launcher'),

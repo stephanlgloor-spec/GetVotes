@@ -1,7 +1,8 @@
 <mat-toolbar color="primary">
-  <span>{{ title }}</span>
+  <span>GetVotes Zürich</span>
 </mat-toolbar>
 
 <div class="app-container">
-  <app-get-votes></app-get-votes>
+  <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+  <app-voting-table *ngIf="!loading" [data]="results"></app-voting-table>
 </div>

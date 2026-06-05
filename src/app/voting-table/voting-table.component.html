@@ -1,0 +1,24 @@
+<table mat-table [dataSource]="data" class="voting-table">
+  <ng-container matColumnDef="index">
+    <th mat-header-cell *matHeaderCellDef>#</th>
+    <td mat-cell *matCellDef="let item; let i = index">{{ i + 1 }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="abstimmung">
+    <th mat-header-cell *matHeaderCellDef>Abstimmung</th>
+    <td mat-cell *matCellDef="let item">{{ item.abstimmung }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="ja">
+    <th mat-header-cell *matHeaderCellDef>Ja</th>
+    <td mat-cell *matCellDef="let item">{{ item.ja }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="nein">
+    <th mat-header-cell *matHeaderCellDef>Nein</th>
+    <td mat-cell *matCellDef="let item">{{ item.nein }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

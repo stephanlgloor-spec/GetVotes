@@ -1,0 +1,84 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0" pages="2">
+  <diagram name="Komponentenmodell" id="0">
+    <mxGraphModel dx="1426" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="AppComponent" vertex="1">
+          <mxGeometry height="80" width="180" x="90" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="AggregatedResultsService" vertex="1">
+          <mxGeometry height="80" width="220" x="870" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" value="getAggregatedResults util" vertex="1">
+          <mxGeometry height="80" width="220" x="560" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" value="VotingTableComponent" vertex="1">
+          <mxGeometry height="80" width="220" x="120" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;" value="Playwright E2E Test\n(route mock)" vertex="1">
+          <mxGeometry height="100" width="220" x="940" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="7" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" target="3" value="loadAggregatedResults()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" target="4" value="fetch CSV / parse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" source="2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" target="5" value="[data]=results">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;dashed=1;" target="2" value="E2E startet App / mockt CSV">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="mit Selenium" id="aqnMXGMgpgY75dT4o91S">
+    <mxGraphModel dx="1426" dy="848" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="LDnFlbybz4RpqwnxFVTK-0" />
+        <mxCell id="LDnFlbybz4RpqwnxFVTK-1" parent="LDnFlbybz4RpqwnxFVTK-0" />
+        <mxCell id="LDnFlbybz4RpqwnxFVTK-2" parent="LDnFlbybz4RpqwnxFVTK-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;" value="AppComponent" vertex="1">
+          <mxGeometry height="80" width="180" x="90" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LDnFlbybz4RpqwnxFVTK-3" parent="LDnFlbybz4RpqwnxFVTK-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1D5E7;strokeColor=#9673A6;" value="AggregatedResultsService" vertex="1">
+          <mxGeometry height="80" width="220" x="870" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="LDnFlbybz4RpqwnxFVTK-4" parent="LDnFlbybz4RpqwnxFVTK-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;" value="getAggregatedResults util" vertex="1">
+          <mxGeometry height="80" width="220" x="870" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="LDnFlbybz4RpqwnxFVTK-5" parent="LDnFlbybz4RpqwnxFVTK-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;" value="VotingTableComponent" vertex="1">
+          <mxGeometry height="80" width="220" x="120" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="LDnFlbybz4RpqwnxFVTK-7" edge="1" parent="LDnFlbybz4RpqwnxFVTK-1" source="LDnFlbybz4RpqwnxFVTK-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" target="LDnFlbybz4RpqwnxFVTK-3" value="loadAggregatedResults()">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LDnFlbybz4RpqwnxFVTK-8" edge="1" parent="LDnFlbybz4RpqwnxFVTK-1" source="LDnFlbybz4RpqwnxFVTK-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" target="LDnFlbybz4RpqwnxFVTK-4" value="fetch CSV / parse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LDnFlbybz4RpqwnxFVTK-9" edge="1" parent="LDnFlbybz4RpqwnxFVTK-1" source="LDnFlbybz4RpqwnxFVTK-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#000000;" target="LDnFlbybz4RpqwnxFVTK-5" value="[data]=results">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b21RFCrNnp_HMq2Rx9bv-0" parent="LDnFlbybz4RpqwnxFVTK-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="AppComponentWrapper" vertex="1">
+          <mxGeometry height="80" width="180" x="310" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="b21RFCrNnp_HMq2Rx9bv-1" parent="LDnFlbybz4RpqwnxFVTK-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" value="VotingTableComponentWrapper" vertex="1">
+          <mxGeometry height="80" width="220" x="310" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="b21RFCrNnp_HMq2Rx9bv-3" edge="1" parent="LDnFlbybz4RpqwnxFVTK-1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" target="b21RFCrNnp_HMq2Rx9bv-1" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="334" y="529.5" as="sourcePoint" />
+            <mxPoint x="494" y="529.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b21RFCrNnp_HMq2Rx9bv-5" edge="1" parent="LDnFlbybz4RpqwnxFVTK-1" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;" value="Use">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="270" y="120" as="sourcePoint" />
+            <mxPoint x="327" y="200.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
