@@ -7,8 +7,10 @@
     "start": "ng serve --host 0.0.0.0 --port 8000",
     "lint": "npx eslint \"src/**/*.ts\"",
     "build": "npm run lint && ng build",
-    "test": "ng test --watch=false --progress=false",
-    "test:watch": "ng test",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:precise": "NODE_OPTIONS=--enable-source-maps vitest run",
+    "test:ci-coverage": "NODE_OPTIONS=--enable-source-maps COVERAGE_REPORTER=html,json COVERAGE_DIR=coverage vitest run --coverage",
     "test:e2e": "npx playwright test",
     "e2e": "npm run test:e2e"
   },
@@ -23,8 +25,13 @@
     "@angular/platform-browser": "^19.2.13",
     "@angular/platform-browser-dynamic": "^19.2.13",
     "@angular/router": "^19.2.13",
+    "browserify-zlib": "^0.2.0",
+    "hyparquet": "^1.26.0",
+    "path-browserify": "^1.0.1",
     "rxjs": "^7.8.0",
+    "stream-browserify": "^3.0.0",
     "tslib": "^2.6.0",
+    "util": "^0.12.5",
     "zone.js": "^0.15.0"
   },
   "devDependencies": {
@@ -32,19 +39,16 @@
     "@angular/cli": "^19.2.13",
     "@angular/compiler-cli": "^19.2.13",
     "@playwright/test": "^1.50.0",
-    "@types/jasmine": "^4.3.0",
     "@types/node": "^20.12.0",
-    "eslint": "^8.57.0",
     "@typescript-eslint/eslint-plugin": "^6.1.0",
     "@typescript-eslint/parser": "^6.1.0",
-    "jasmine-core": "^4.6.0",
-    "jasmine-spec-reporter": "^7.0.0",
-    "karma": "^6.4.2",
-    "karma-chrome-launcher": "^3.2.0",
-    "karma-coverage": "^2.2.0",
-    "karma-jasmine": "^5.1.0",
-    "karma-jasmine-html-reporter": "^2.0.0",
+    "@vitest/ui": "^1.6.1",
+    "eslint": "^8.57.0",
+    "jsdom": "^22.1.0",
     "puppeteer": "^24.43.1",
-    "typescript": "^5.4.5"
-  }
+    "typescript": "^5.4.5",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^1.6.1"
+  },
+  "type": "module"
 }

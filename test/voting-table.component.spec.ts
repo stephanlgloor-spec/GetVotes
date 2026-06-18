@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { VotingTableComponent } from '../src/app/voting-table/voting-table.component';
+import { VotingTableComponent } from '@/app/voting-table/voting-table.component';
 
 describe('VotingTableComponent', () => {
   let component: VotingTableComponent;
@@ -12,6 +12,9 @@ describe('VotingTableComponent', () => {
 
     fixture = TestBed.createComponent(VotingTableComponent);
     component = fixture.componentInstance;
+    // Resolve external template/style resources for standalone components
+    // @ts-ignore
+    await (TestBed as any).resolveComponentResources?.();
   });
 
   it('renders table rows for provided data', () => {

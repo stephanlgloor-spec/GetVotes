@@ -1,11 +1,16 @@
 import { TestBed } from '@angular/core/testing';
-import { AppComponent } from '../src/app/app.component';
+import { AppComponent } from '@/app/app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [AppComponent]
     }).compileComponents();
+     await TestBed.compileComponents();
+    // Resolve external template/style resources for standalone components
+    // (Vitest environment needs explicit resource resolution)
+    // @ts-ignore
+    await (TestBed as any).resolveComponentResources?.();
   });
 
   it('should create the app', () => {
@@ -24,7 +29,7 @@ describe('AppComponent', () => {
     fixture.detectChanges();
     const app = fixture.componentInstance
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(app.loading).toBeTrue();
+    expect(app.loading).toBeTruthy();
     expect(compiled.querySelector('mat-progress-bar')).toBeTruthy();
     app.loading = false;
     fixture.detectChanges();

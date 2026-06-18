@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { GetVotesComponent } from '../src/app/get-votes/get-votes.component';
+import { GetVotesComponent } from '@/app/get-votes/get-votes.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 
@@ -12,6 +12,10 @@ describe('GetVotesComponent', () => {
     await TestBed.configureTestingModule({
       imports: [GetVotesComponent, MatButtonModule, MatCardModule]
     }).compileComponents();
+
+    // Resolve external template/style resources for standalone components
+    // @ts-ignore
+    await (TestBed as any).resolveComponentResources?.();
 
     fixture = TestBed.createComponent(GetVotesComponent);
     component = fixture.componentInstance;
