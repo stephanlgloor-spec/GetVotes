@@ -11,3 +11,9 @@ th.mat-header-cell,
 td.mat-cell {
   padding: 12px 16px;
 }
+
+th.mat-header-cell-right,
+td.mat-cell-right {
+  text-align: right;
+  padding: 12px 16px;
+}

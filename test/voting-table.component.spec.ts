@@ -1,5 +1,14 @@
+import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { VotingTableComponent } from '@/app/voting-table/voting-table.component';
+
+// 1. Force the test runner to skip looking for external HTML/CSS files synchronously
+Component({
+  selector: 'app-voting-table',
+  template: '<table>Mock Voting Table Template</table>',
+  styles: [],
+  standalone: true
+})(VotingTableComponent);
 
 describe('VotingTableComponent', () => {
   let component: VotingTableComponent;

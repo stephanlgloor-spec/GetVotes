@@ -2,6 +2,9 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { AggregatedResult } from '../utils';
+import { getAggregatedResultsTitle } from '@/app/utils/get-aggregated-results';
+
+
 
 @Component({
   selector: 'app-voting-table',
@@ -12,5 +15,9 @@ import { AggregatedResult } from '../utils';
 })
 export class VotingTableComponent {
   @Input() data: AggregatedResult[] = [];
-  displayedColumns = ['index', 'abstimmung', 'ja', 'nein'];
+  displayedColumns = ['index', 'abstimmung', 'kanton', 'ja', 'nein'];
+  
+  get title() {
+    return getAggregatedResultsTitle();
+  }
 }
