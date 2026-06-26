@@ -7,33 +7,6 @@ import { dirname } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 export const __dirname = dirname(__filename);
-// import { readParquetFile } from '@/app/utils/read_parquet';
-// import { readFileSync } from 'fs';
-// import { resolve } from 'path';
-
-// const csv = `Abstimmungs_Text,Ja_Absolut,Nein_Absolut,Kanton
-// Testvorlage 1,100,50,Zürich
-// Testvorlage 1,20,10,Schaffhausen
-// Andere Vorlage,5,2,Bern`;
-
-
-//     // 1. Path to your local test file
-//     const path = resolve(__dirname, '../../src/assets/daten/abstimmungen_seit1933.parquet');
-    
-//     // 2. Read file as a Buffer (Node.js binary format)
-//     const fileBuffer = readFileSync(path);
-//     const arrayBuffer = new Uint8Array(fileBuffer).slice().buffer
-
-//     // 3. Mock the global fetch
-//     stubGlobal('fetch', vi.fn(() =>
-//       Promise.resolve({
-//         ok: true,
-//         // Convert Node Buffer to ArrayBuffer for the fetch mock
-//         arrayBuffer: () => Promise.resolve(arrayBuffer),
-//       })
-//     ));
-//     const res = readParquetFile('/fakepath/tofile.parquet').then ( () => {});
-
 
 test('GetVotes app renders Zurich aggregated results table', async ({ page }) => {
   await page.goto('/');
